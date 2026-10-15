@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>送你一朵小红花</title>
+    <style>
+        /* 让内容在手机上居中、字号合适 */
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;   /* 图片宽度不超过屏幕，防止溢出 */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>开心一刻</h2>
+    <hr color="#33FFFF;">
+    
+   <img src="https://s1.aigei.com/src/img/gif/73/73e353acf00e47fc8cbd6dcc893ea55a.gif?imageMogr2/auto-orient/thumbnail/!282x320r/gravity/Center/crop/282x320/quality/85/%7CimageView2/2/w/282&e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:fgC3z_nLYO6BeS_uzOyZnVhhUmo=" alt="">
+
+    <!-- 隐藏的音频，触屏后播放 -->
+    <audio id="bgm" src="bgm.mp3" loop></audio>
+
+    <script>
+        function playBGM() {
+            var audio = document.getElementById("bgm");
+            audio.play();
+        }
+        document.addEventListener("touchstart", playBGM, { once: true });
+        document.addEventListener("click", playBGM, { once: true });
+    </script>
+</body>
+</html>
